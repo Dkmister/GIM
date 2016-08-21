@@ -2,7 +2,8 @@ from PIL import Image
 
 #===============================
 #   Given a image, return a Image BW
-#   This is just a BS
+#   Using L = 0.299 * red + 0.587 * green + 0.114 * blue
+#   Where rgb[0] = red , rgb[1] = green , rgb[2] = blue
 #===============================
 def black_white(a_image):
     new_image = Image.new("RGB",a_image.size,"black")
@@ -16,7 +17,10 @@ def black_white(a_image):
     return new_image
     
             
-
+#-------------------------------------
+#   Tests using a image 1920x1080 => FULL HD
+#   Status = OK
+#-------------------------------------
 im = Image.open("batman.jpeg")
 nw_im = black_white(im)
 nw_im.show()

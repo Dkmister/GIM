@@ -3,7 +3,7 @@ from PIL import Image
 #===============================
 #   Given a image, return a Image Filtered
 #   Using l = 0.299*r+0.587*g+0.114*b
-#   Then aplying, return a filtered image
+#   Then aplying, returns a filtered image
 #===============================
 def filter_perfect_illusion(a_image):
     new_image = Image.new("RGB",a_image.size,"black")
@@ -20,7 +20,8 @@ def filter_perfect_illusion(a_image):
     return new_image
             
 
-im = Image.open("batman.jpeg")
+im = Image.open("young-stalin.jpeg")
+im.show()
 nw_im = filter_perfect_illusion(im)
 nw_im.show()
 

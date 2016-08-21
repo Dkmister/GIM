@@ -4,7 +4,7 @@ from PIL import Image
 #   Given a image, return a Image matrix with
 #   Inverted values of the original one
 #===============================
-def rotate_image(a_image):
+def rotate_image_180(a_image):
     new_image = Image.new("RGB",a_image.size,"black")
     pixels_new = new_image.load()
     pixels_old = a_image.load()
@@ -19,6 +19,6 @@ def rotate_image(a_image):
     return new_image
 
 im = Image.open("young-stalin.jpeg")
-nw_im = rotate_image(im)
+nw_im = rotate_image_180(im)
 nw_im.show()
 

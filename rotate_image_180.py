@@ -26,4 +26,5 @@ im = Image.open("young-stalin.jpeg")
 im.show()
 nw_im = rotate_image_180(im)
 nw_im.show()
-
+nw_im = rotate_image_180(nw_im)
+nw_im.show()

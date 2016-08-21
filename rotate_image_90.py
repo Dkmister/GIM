@@ -16,7 +16,7 @@ def rotate_image_90(a_image):
     for i in xrange(w):
         for j in xrange(h):
             rgb = a_image.getpixel((i,j))
-            pixels_new[h-j-1,w-i-1] = (rgb[0],rgb[1],rgb[2])
+            pixels_new[h-j-1,i] = (rgb[0],rgb[1],rgb[2])
     return new_image
 #-----------------------------------
 # Test using a simple image of Stalin 
@@ -25,4 +25,6 @@ def rotate_image_90(a_image):
 im = Image.open("young-stalin.jpeg")
 im.show()
 nw_im = rotate_image_90(im)
+nw_im.show()
+nw_im = rotate_image_90(nw_im)
 nw_im.show()

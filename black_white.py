@@ -1,19 +1,22 @@
 from PIL import Image
 
 #===============================
-#   Given a image, return a Image matrix with
-#   Inverted values of the original one
+#   Given a image, return a Image BW
+#   
 #===============================
-def rotate_image(a_image):
+def black_white(a_image):
+    new_image = Image.new("L",a_image.size)
     xy = a_image.size
     w = xy[0]
     h = xy[1]
-    # new_image = zero_triples[w][h]
+    
     for i in xrange(w):
         for j in xrange(h):
             rgb = im.getpixel((i,j))
-            # new_image[w-i-1][h-j-1] += rgb[i][j]
+            l = 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]
+            
+            
 
 im = Image.open("young-stalin.jpeg")
-rotate_image(im)
+black_white(im)
 

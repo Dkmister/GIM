@@ -5,15 +5,20 @@ from PIL import Image
 #   Inverted values of the original one
 #===============================
 def rotate_image(a_image):
+    new_image = Image.new("RGB",a_image.size,"black")
+    pixels_new = new_image.load()
+    pixels_old = a_image.load()
     xy = a_image.size
     w = xy[0]
     h = xy[1]
-    # new_image = zero_triples[w][h]
+    
     for i in xrange(w):
         for j in xrange(h):
-            rgb = im.getpixel((i,j))
-            # new_image[w-i-1][h-j-1] += rgb[i][j]
+            rgb = a_image.getpixel((i,j))
+            pixels_new[w-i-1,h-j-1] = (rgb[0],rgb[1],rgb[2])
+    return new_image
 
 im = Image.open("young-stalin.jpeg")
-rotate_image(im)
+nw_im = rotate_image(im)
+nw_im.show()
 

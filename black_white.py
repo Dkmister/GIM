@@ -21,7 +21,7 @@ def black_white(a_image):
 #   Tests using a image 1920x1080 => FULL HD
 #   Status = OK
 #-------------------------------------
-im = Image.open("batman.jpeg")
-nw_im = black_white(im)
-nw_im.show()
+# im = Image.open("batman.jpeg")
+# nw_im = black_white(im)
+# nw_im.show()
 

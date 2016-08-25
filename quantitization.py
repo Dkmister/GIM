@@ -21,5 +21,5 @@ def quantitization(a_image, shades):
     for x in xrange(w):
 	for y in xrange(h):
 	    rgb  = a_image.getpixel((i,j))
-	    if (rgb[0] == rgb[1] && rgb[1] == rgb[2]):
+	    if (rgb[0] == rgb[1] and rgb[1] == rgb[2]):
 		

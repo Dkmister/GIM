@@ -13,9 +13,12 @@ def list_intervals_shade(num_intervals):
 
 
 def interval_verification(rgb,lst_intervals):
+    if(rgb==0):
+        return (lst_intervals[1])/2
     for i in xrange(len(lst_intervals)):
-        if(float(rgb)<=lst_intervals[i]):
+        if(float(rgb)<=lst_intervals[i] and i!=0):
             return ((lst_intervals[i-1] + lst_intervals[i])/2)
+        
     
 def quantitization(a_image, shades):
     new_image = Image.new("RGB",a_image.size,"black")
@@ -35,4 +38,7 @@ def quantitization(a_image, shades):
     return new_image
 
 
-print list_intervals_shade(2)
+im = Image.open("batman.jpeg")
+nw_im = black_white(im)
+nw_i = quantitization(nw_im,3)
+nw_i.show()

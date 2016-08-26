@@ -1,5 +1,10 @@
 from PIL import Image
-
+#=============================================
+# Returns a negative image of a RGB or L Image
+# Where 
+# Pixel = 255 - Pixel
+# Returns a Image
+#=============================================
 def negative(im):
     new_image = Image.new("RGB",im.size,"black")
     pixels = new_image.load() #create the pixel map
@@ -11,9 +16,9 @@ def negative(im):
     return new_image
 
 
-
-
-
-im = Image.open("young-stalin.jpeg")
-nw_im = negative(im)
-nw_im.show()
+#-------------------------------------------
+# Tests
+#-------------------------------------------
+# im = Image.open("young-stalin.jpeg")
+# nw_im = negative(im)
+# nw_im.show()

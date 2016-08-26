@@ -20,8 +20,8 @@ def filter_perfect_illusion(a_image):
     return new_image
             
 
-im = Image.open("young-stalin.jpeg")
-im.show()
-nw_im = filter_perfect_illusion(im)
-nw_im.show()
+# im = Image.open("young-stalin.jpeg")
+# im.show()
+# nw_im = filter_perfect_illusion(im)
+# nw_im.show()
 

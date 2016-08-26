@@ -22,9 +22,9 @@ def rotate_image_90(a_image):
 # Test using a simple image of Stalin 
 # Status = OK
 #-----------------------------------
-im = Image.open("young-stalin.jpeg")
-im.show()
-nw_im = rotate_image_90(im)
-nw_im.show()
-nw_im = rotate_image_90(nw_im)
-nw_im.show()
+# im = Image.open("young-stalin.jpeg")
+# im.show()
+# nw_im = rotate_image_90(im)
+# nw_im.show()
+# nw_im = rotate_image_90(nw_im)
+# nw_im.show()

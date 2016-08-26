@@ -17,10 +17,11 @@ def histogram_list(a_image):
 
 
     return hist_lst
-
-
-im = Image.open("young-stalin.jpeg")
-nw_im = black_white(im)
-lst = histogram_list(nw_im)
-print lst , len(lst)
+#-------------------------------
+# Tests following the image
+#-------------------------------
+# im = Image.open("young-stalin.jpeg")
+# nw_im = black_white(im)
+# lst = histogram_list(nw_im)
+# print lst , len(lst)
                 

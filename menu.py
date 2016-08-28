@@ -6,17 +6,17 @@ from quantitization import *
 from rotate_image_180 import *
 from rotate_image_90 import *
 from filter_perfect_illusion import *
-
+from negative import *
 
 
 
 def menu_choices():
     link_im = easy.get_file_names()
     old_im = Image.open(link_im[0])
-    msgbox("Welcome to bizarre program!")
+    msgbox("Welcome to the bizarre Image Processing!")
     msg_ ="What is your choice?"
     title_ = "Image Operations"
-    choices = ["BW", "Rotate 180", "Rotate 90", "Random Quantum","Filter PF"]
+    choices = ["BW", "Rotate 180", "Rotate 90", "Random Quantum","Filter PF","Negative"]
     choice = choicebox(msg_, title_, choices)
     
     old_im.show()
@@ -37,9 +37,12 @@ def menu_choices():
         nw_im = black_white(old_im)
         nw_im = quantitization(nw_im,randint(1,255))
         nw_im.show()
-
+    if choice == "Negative":
+        nw_im = negative(old_im)
+        nw_im.show()
     namefile = filesavebox(msg="Salve a imagem", title="Save me", default=None)
     nw_im.save(namefile)
+
 def main():
     menu_choices()
 

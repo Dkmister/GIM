@@ -18,8 +18,15 @@ def menu_choices():
     choices = ["BW", "Rotate 180", "Rotate 90", "Quantum"]
     choice = choicebox(msg, title, choices)
     
-
-
+    if choice == "BW":
+        nw_im = black_white(old_im)
+        nw_im.show()
+    if choice == "Rotate 180":
+        nw_im = rotate_image_180(old_im)
+        nw_im.show()
+    if choice == "Rotate 90":
+        nw_im = rotate_image_90(old_im)
+        nw_im.show()
 
 
 

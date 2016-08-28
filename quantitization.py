@@ -12,9 +12,9 @@ def list_intervals_shade(num_intervals):
     lst_i = []
     a1 = float(255.00/float(num_intervals))
     lst_i.append(0)
-    lst_i.append(r)
+    lst_i.append(a1)
     for i in xrange(2,num_intervals):
-	    lst_i.append((i * r))
+	    lst_i.append((i * a1))
     lst_i.append(255.0)
     return lst_i
 #=======================================

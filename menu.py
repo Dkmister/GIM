@@ -35,7 +35,9 @@ def menu_choices():
         nw_im.show()
     if choice == "Random Quantum":
         nw_im = black_white(old_im)
-        nw_im = quantitization(nw_im,randint(1,255))
+        r = randint(1,255)
+        print r
+        nw_im = quantitization(nw_im,r)
         nw_im.show()
     if choice == "Negative":
         nw_im = negative(old_im)

@@ -6,31 +6,15 @@ from PIL import Image
 # C -> Constant for brightness
 # Returns a image
 #=========================================
-def brightness_rgb(im,a):
+def constrast_rgb(im,a):
     new_image = Image.new("RGB",im.size,"black")
     pixels = new_image.load() #create the pixel map
 
     for i in range(im.size[0]):
         for j in range(im.size[1]):
             rgb = im.getpixel((i,j))
-            sum_red = a + rgb[0]
-            if sum_red < 0:
-                sum_red = 0
-            elif sum_red > 255:
-                sum_red = 255
-            sum_green = a + rgb[1]
-            if sum_green < 0:
-                    sum_red = 0
-            elif sum_green > 255:
-                sum_red = 255
-            sum_blue = a + rgb[2]
-            if sum_blue < 0:
-                    sum_red = 0
-            elif sum_blue > 255:
-                sum_red = 255
-            pixels[i,j] = (int(sum_red),int(sum_green),int(sum_blue))
+            pixels[i,j] = (int(a * rgb[0]) , int(a * rgb[1]), int(a * rgb[2]))
     return new_image
-
 #---------------------------------
 # Tests
 #---------------------------------

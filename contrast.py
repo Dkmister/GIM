@@ -19,5 +19,5 @@ def constrast_rgb(im,a):
 # Tests
 #---------------------------------
 # im = Image.open("young-stalin.jpeg")
-# nw_im = brightness_rgb(im,0.56)
+# nw_im = contrast_rgb(im,0.56)
 # nw_im.show()

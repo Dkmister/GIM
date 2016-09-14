@@ -27,7 +27,7 @@ def flip(a_image):
 #-------------------
 # Tests using Stalin
 #-------------------
-# im = Image.open("young-stalin.jpeg")
-# im.show()
-# nw_im = flip(im)
-# nw_im.show()
+im = Image.open("young-stalin.jpeg")
+im.show()
+nw_im = flip(im)
+nw_im.show()

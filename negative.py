@@ -19,6 +19,7 @@ def negative(im):
 #-------------------------------------------
 # Tests
 #-------------------------------------------
-# im = Image.open("young-stalin.jpeg")
-# nw_im = negative(im)
-# nw_im.show()
+im = Image.open("young-stalin.jpeg")
+im.show()
+nw_im = negative(im)
+nw_im.show()

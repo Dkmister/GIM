@@ -287,8 +287,8 @@ def convolution_kernel_SHY(a_image):
 # >> convolution_kernel_PAG working ->OK
 # >> convolution_kernel_PHX working -> OK
 # >> convolution_kernel_PHYHX working -> OK
-im = Image.open("young-stalin.jpeg")
+im = Image.open("mi.jpg")
 nw_im = black_white(im)
 nw_im.show()
-cvl_im = convolution_kernel_SHY(nw_im)
+cvl_im = convolution_kernel_G(nw_im)
 cvl_im.show()

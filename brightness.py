@@ -34,6 +34,9 @@ def brightness_rgb(im,a):
 #---------------------------------
 # Tests
 #---------------------------------
-# im = Image.open("young-stalin.jpeg")
-# nw_im = brightness_rgb(im,0.56)
-# nw_im.show()
+im = Image.open("young-stalin.jpeg")
+im.show()
+nw_im = brightness_rgb(im,-12.56)
+nw_im.show()
+nw_im2 = brightness_rgb(im,20)
+nw_im2.show()

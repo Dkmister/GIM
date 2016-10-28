@@ -8,12 +8,17 @@ def zoom_in2(a_image):
     pixels_new = new_image.load()
     pixels_old = a_image.load()
 
-    for i in xrange(0,2*w):
-        for j in xrange(0,2*h):
+    for i in xrange(0,(2*w)-1):
+        for j in xrange(0,(2*h)-1):
             if (i%2==0 and j%2==0):
                 rgb = a_image.getpixel((i/2,j/2))
                 pixels_new[i,j] = (rgb[0],rgb[1],rgb[2])
-            elif(i%2!=0 and j%2==0):
+            if (i==2*w - 1 and j==2*h - 1):
+                print i,j
+            
+    for i in xrange(0,(2*w)-1):
+        for j in xrange(0,(2*h)-1):        
+            if(i%2!=0 and j%2==0):
                 rgb_A = a_image.getpixel((i-1,j))
                 rgb_B = a_image.getpixel((i+1,j))
 
@@ -22,16 +27,19 @@ def zoom_in2(a_image):
                 blue = (rgb_A[2]+rgb_B[2])/2
 
                 pixels_new[i,j] = (red,green,blue)
-            elif(i%2==0 and j%2!=0):
-                rgb_A = a_image.getpixel((i,j-1))
-                rgb_B = a_image.getpixel((i,j+1))
 
+            if(i%2==0 and j%2!=0):
+                rgb_A = a_image.getpixel((i,j-1))
+                rgb_B = a_image.getpixel((i,j+1)) # the error is here in this if
                 red = (rgb_A[0]+rgb_B[0])/2
                 green = (rgb_A[1]+rgb_B[1])/2
                 blue = (rgb_A[2]+rgb_B[2])/2
 
                 pixels_new[i,j] = (red,green,blue)
-            else:
+
+    for i in xrange(0,(2*w)-1):
+        for j in xrange(0,(2*h)-1):
+            if(i%2!=0 and j%2!=0):
                 rgb_A = a_image.getpixel((i-1,j))
                 rgb_B = a_image.getpixel((i+1,j))
                 rgb_C = a_image.getpixel((i,j-1))
